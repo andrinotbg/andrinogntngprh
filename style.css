@@ -37,8 +37,15 @@ li {
     color: #555;
 }
 
+code {
+    background-color: #f0f0f0; 
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace; 
+}
+
 li::marker {
-    color: #000000; 
+    color: #000000;
 }
 
 @media (max-width: 600px) {
