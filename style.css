@@ -23,11 +23,13 @@ h2 {
 p {
     color: #555;
     line-height: 1.6;
+    margin-bottom: 15px; 
 }
 
 ul {
     list-style-type: disc;
     padding-left: 20px;
+    margin-bottom: 15px; 
 }
 
 li {
@@ -36,7 +38,7 @@ li {
 }
 
 li::marker {
-    color: #007BFF;
+    color: #000000; 
 }
 
 @media (max-width: 600px) {
