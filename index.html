@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perpustakaan Andrino Grevo Eglon</title>
-     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         body {
             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6YZgAcZZDjDOpawIWsCX2bPKU_VlgBekWjw&s");
@@ -14,144 +14,174 @@
             line-height: 1.6;
             margin: 20px;
         }
+        .content {
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center"><u>Perpustakaan Andrino Grevo Eglon</u></h1>
-        <h2 class="text-success text-center">Selamat Datang di Web Perpustakaan Andrino Grevo Eglon</h2>
-        
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Perpustakaan</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="#media">Media</a></li>
-                    <li><a href="#formulir">Formulir</a></li>
-                    <li><a href="#tabel">Tabel Buku</a></li>
-                </ul>
-            </div>
-        </nav>
 
-        <div id="media" class="text-center">
-            <h3>Media Perpustakaan UINSU</h3>
-            <img src="https://library.uinsu.ac.id/wp-content/uploads/2021/12/perpustakaan-uin-su-the-gate-of-knowledge.jpg" alt="Gedung Perpustakaan" class="img-responsive center-block" style="max-width: 100%; height: auto;">
-            <h5><i>Perpustakaan UINSU</i></h5>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1KfLSPTUtAI?si=djtQKa4CGlCiB0IU" title="YouTube video player" class="embed-responsive-item" allowfullscreen></iframe>
-            <p>Feast - Nina (Official Lyric Video)</p>
-            <audio controls>
-                <source src="music/Feast - Nina (Official Lyric Video).mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Perpustakaan</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#formulir">Formulir</a></li>
+                    <li><a href="#buku">Tabel Buku</a></li>
+                    <li><a href="#detail">Detail Pemesanan</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        <!-- Kolom 1 -->
+        <div class="col-md-4">
+            <h1><u>Perpustakaan Andrino Grevo Eglon</u></h1>
+            <h2 style="color: green;">Selamat Datang di Web Perpustakaan Andrino Grevo Eglon</h2>
+            <p>Perkenalkan, nama saya Andrino Grevo Eglon dengan 222201003. Ini adalah perpustakaan
+                <i>homepage</i> <b>pertama</b> saya, karena saya baru belajar tentang cara membuat 
+                <b><i><a href="https://library.uinsu.ac.id/perpustakaan-digital-uin-sumut/">website perpustakaan UINSU</a></i></b>.
+            </p>
         </div>
 
-        <div id="formulir" class="mt-5">
-            <h2>Formulir Anggota Perpustakaan</h2>
+        <!-- Kolom 2 -->
+        <div class="col-md-4">
+            <h3>Berikut ini adalah gambar dari gedung Perpustakaan UINSU.</h3>
+            <img src="https://library.uinsu.ac.id/wp-content/uploads/2021/12/perpustakaan-uin-su-the-gate-of-knowledge.jpg" alt="Perpustakaan UINSU" class="img-responsive" />
+            <h5><i>Perpustakaan UINSU</i></h5>
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/1KfLSPTUtAI" frameborder="0" allowfullscreen></iframe>
+            <p><h6>Feast - Nina (Official Lyric Video)</h6></p>
+            <audio controls>
+                <source src="music/Feast - Nina (Official Lyric Video).mp3" type="audio/mpeg">
+            </audio>
+
+            <div class="content">
+                <h2>Kelebihan HTML5</h2>
+                <p>HTML5 memiliki sejumlah kelebihan dibandingkan dengan HTML:</p>
+                <ul>
+                    <li>Elemen semantik seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, dan lainnya.</li>
+                    <li>Elemen <code>&lt;audio&gt;</code> dan <code>&lt;video&gt;</code> memungkinkan penyisipan multimedia.</li>
+                    <li>LocalStorage untuk penyimpanan data lokal.</li>
+                    <li>Elemen <code>&lt;canvas&gt;</code> untuk visualisasi data.</li>
+                </ul>
+                <h2>CSS</h2>
+                <ul>
+                    <li>Pengaturan tampilan dan tata letak elemen pada halaman web.</li>
+                    <li>Desain responsif untuk berbagai ukuran layar.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="col-md-4">
+            <h2 id="formulir">Formulir Anggota Perpustakaan</h2>
             <form>
-                <div class="form-group">
-                    <label>Nama Lengkap:</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>NIM:</label>
-                    <input type="password" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Alamat:</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Jenis Kelamin:</label><br>
-                    <label class="radio-inline"><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki</label>
-                    <label class="radio-inline"><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
-                </div>
-                <div class="form-group">
-                    <label>Email:</label>
-                    <input type="email" class="form-control" placeholder="@gmail.com">
-                </div>
-                <div class="form-group">
-                    <label>Nomor Telepon:</label>
-                    <input type="text" class="form-control" placeholder="+62...">
-                </div>
-                <div class="form-group">
-                    <label>Tempat Lahir:</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Tanggal Lahir:</label>
-                    <input type="date" class="form-control">
-                </div>
+                <table class="table">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>NIM:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin:</td>
+                        <td>
+                            <label><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki</label>
+                            <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Tempat Lahir:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir:</td>
+                        <td><input type="date" class="form-control"></td>
+                    </tr>
+                </table>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+
+            <h2 id="buku">Tabel Bahan Buku</h2>
+            <table class="table">
+                <tr>
+                    <th>No.</th>
+                    <th>Judul Buku</th>
+                    <th>Pengarang</th>
+                    <th>Penerbit</th>
+                    <th>Tahun Terbit</th>
+                    <th>Jumlah Halaman</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>The American Spiritual Culture</td>
+                    <td>William Dean</td>
+                    <td>Continuum</td>
+                    <td>2002</td>
+                    <td>240</td>
+                    <td>0-8264-1440-0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Negara Demokrasi Indonesia</td>
+                    <td>Dadang Juliantara</td>
+                    <td>Pondok Edukasi</td>
+                    <td>2002</td>
+                    <td>236</td>
+                    <td>979-3305-00-2</td>
+                </tr>
+            </table>
+
+            <h2 id="detail">Detail Pemesanan</h2>
+            <form>
+                <table class="table">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Anggota:</td>
+                        <td><input type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" class="form-control"></td>
+                    </tr>
+                </table>
                 <button type="submit" class="btn btn-primary">Kirim</button>
             </form>
         </div>
 
-        <div id="tabel" class="mt-5">
-            <h2>Tabel Bahan Buku</h2>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Judul Buku</th>
-                        <th>Pengarang</th>
-                        <th>Penerbit</th>
-                        <th>Tahun Terbit</th>
-                        <th>Jumlah Halaman</th>
-                        <th>ISBN</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>The American Spiritual Culture</td>
-                        <td>William Dean</td>
-                        <td>Continuum</td>
-                        <td>2002</td>
-                        <td>240</td>
-                        <td>0-8264-1440-0</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Negara Demokrasi Indonesia</td>
-                        <td>Dadang Juliantara</td>
-                        <td>Pondok Edukasi</td>
-                        <td>2002</td>
-                        <td>236</td>
-                        <td>979-3305-00-2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Bergerak Bersama Rakyat</td>
-                        <td>Suharsih</td>
-                        <td>Resist Book</td>
-                        <td>2015</td>
-                        <td>324</td>
-                        <td>978-0062316097</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Berani Menembus Batas</td>
-                        <td>Jarot Wijanarko</td>
-                        <td>Pribadi Unggul</td>
-                        <td>2010</td>
-                        <td>278</td>
-                        <td>978-0735211292</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Terapi Madu</td>
-                        <td>Adji Suranto</td>
-                        <td>Penebar PLUS</td>
-                        <td>2012</td>
-                        <td>221</td>
-                        <td>978-0399590504</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
