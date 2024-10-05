@@ -17,10 +17,43 @@
         h1, h2, h3, h4, h5, h6 {
             color: green;
         }
+
+        body {
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #007bff; /* Warna navbar */
+            border: none;
+            border-radius: 0;
+        }
+        .navbar-brand, .navbar-nav>li>a {
+            color: #fff !important; /* Warna teks navbar */
+        }
+        .navbar-nav>li>a:hover {
+            background-color: #0056b3; /* Warna hover */
+        }
+        .header-container {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #007bff; /* Warna latar belakang */
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header-container h1 {
+            font-size: 48px;
+            text-decoration: underline;
+            margin: 0;
+        }
+        .nav-item {
+            margin: 0 15px;
+        }
     </style>
 </head>
 <body>
-<h1 class="text-center"><u>Perpustakaan UINSU</u></h1>
+<div class="header-container">
+    <h1>Perpustakaan UINSU</h1>
+</div>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
