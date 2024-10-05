@@ -1,65 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<style>
-   body {
-            background-image: url("https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg?uid=R166787732&ga=GA1.2.GA1.1.1628544991.1728095381&semt=ais_hybrid");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perpustakaan Andrino Grevo Eglon</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg");
             background-size: cover;
             color: white;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: green;
         }
         .header-container {
-            display: flex; /* Menggunakan flexbox */
-            justify-content: space-between; /* Menempatkan item di kiri dan kanan */
-            align-items: center; /* Vertikal center */
-            padding: 20px; /* Padding untuk header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
             background-color: #ffffff; /* Warna header */
-            color: white;
+            color: #343a40;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        .header-title {
-            font-size: 24px; /* Ukuran font untuk judul */
-            margin-left: 20px; /* Ruang antara judul dan logo */
-        }
         .navbar {
-            background-color: #ffffff; /* Warna navbar menjadi putih */
+            background-color: #ffffff; /* Warna navbar */
             border: none;
-            border-radius: 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
         .navbar-brand, .navbar-nav>li>a {
-            color: #343a40 !important; /* Warna teks navbar menjadi gelap untuk kontras */
+            color: #343a40 !important; /* Warna teks navbar */
         }
         .navbar-nav>li>a:hover {
-            background-color: #f8f9fa; /* Warna hover yang lebih gelap */
-            color: #007bff; /* Warna saat hover */
-        }
-        .navbar-nav>li>a:focus, .navbar-nav>li>a:active {
-            background-color: #007bff; /* Warna saat di-klik */
-            color: #343a40 !important; /* Pastikan teks tetap putih */
-        }
-        .header-container img {
-            max-width: 100px; /* Atur lebar maksimum gambar */
-            height: auto; /* Menjaga proporsi gambar */
+            background-color: #f8f9fa;
+            color: #007bff;
         }
         .content {
+            background-color: rgba(255, 255, 255, 0.8); /* Latar belakang konten dengan transparansi */
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .header-container img {
+            max-width: 100px; /* Ukuran logo */
+            height: auto; /* Menjaga proporsi gambar */
+        }
+        h2, h3, h5, h6 {
+            color: #343a40; /* Warna teks */
+        }
+        iframe {
+            margin-top: 20px; /* Spasi atas untuk video */
+        }
+        .table {
+            background-color: #ffffff; /* Warna tabel */
         }
     </style>
 </head>
+<body>
+
 <div class="header-container">
-    <div style="display: flex; align-items: center;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
-    </div>
-    <nav class="navbar navbar-default"> <!-- Navbar di kanan -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
+    <nav class="navbar navbar-default">
         <ul class="nav navbar-nav"> 
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -79,7 +80,8 @@
     <h2>Selamat Datang di Perpustakaan Andrino Grevo Eglon</h2>
     <p>Di sini Anda dapat menemukan berbagai koleksi buku dan informasi terkait lainnya. Silakan menjelajahi menu untuk mengetahui lebih lanjut.</p>
 </div>
-    
+
+<div class="content">
     <h3>Berikut ini adalah gambar dari gedung Perpustakaan UINSU.</h3>
     <center>
         <img src="picture/Perpustakaan-uinsu-The-gate-of-knowledge.jpg" alt="Perpustakaan UINSU" class="img-responsive" />
@@ -87,27 +89,24 @@
     <h5><i>Perpustakaan UINSU</i></h5>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/1KfLSPTUtAI" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    <p><h6>Feast - Nina (Official Lyric Video)</h6></p>
+    <h6>Feast - Nina (Official Lyric Video)</h6>
     <audio controls>
         <source src="music/Feast - Nina (Official Lyric Video).mp3" type="audio/mpeg">
     </audio>
+</div>
 
-    <div class="content">
-        <h2>Kelebihan HTML5</h2>
-        <p>HTML5 memiliki sejumlah kelebihan dibandingkan dengan HTML:</p>
-        <ul>
-            <li>Elemen semantik seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, dan lainnya.</li>
-            <li>Elemen <code>&lt;audio&gt;</code> dan <code>&lt;video&gt;</code> memungkinkan penyisipan multimedia.</li>
-            <li>LocalStorage untuk penyimpanan data lokal.</li>
-            <li>Elemen <code>&lt;canvas&gt;</code> untuk visualisasi data.</li>
-        </ul>
-        <h2>CSS</h2>
-        <ul>
-            <li>Pengaturan tampilan dan tata letak elemen pada halaman web.</li>
-            <li>Desain responsif untuk berbagai ukuran layar.</li>
-        </ul>
-    </div>
+<div class="content">
+    <h2>Kelebihan HTML5</h2>
+    <p>HTML5 memiliki sejumlah kelebihan dibandingkan dengan HTML:</p>
+    <ul>
+        <li>Elemen semantik seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, dan lainnya.</li>
+        <li>Elemen <code>&lt;audio&gt;</code> dan <code>&lt;video&gt;</code> memungkinkan penyisipan multimedia.</li>
+        <li>LocalStorage untuk penyimpanan data lokal.</li>
+        <li>Elemen <code>&lt;canvas&gt;</code> untuk visualisasi data.</li>
+    </ul>
+</div>
 
+<div class="content">
     <h2 id="formulir">Formulir Anggota Perpustakaan</h2>
     <form>
         <table class="table">
@@ -149,7 +148,9 @@
         </table>
         <button type="submit" class="btn btn-primary">Kirim</button>
     </form>
+</div>
 
+<div class="content">
     <h2 id="buku">Tabel Bahan Buku</h2>
     <table class="table">
         <tr>
@@ -207,7 +208,9 @@
             <td>-</td>
         </tr>
     </table>
+</div>
 
+<div class="content">
     <h2 id="detail">Detail Pemesanan</h2>
     <form>
         <table class="table">
