@@ -14,18 +14,26 @@
         h1, h2, h3, h4, h5, h6 {
             color: green;
         }
+        .header-container {
+            display: flex; /* Menggunakan flexbox */
+            justify-content: space-between; /* Menempatkan item di kiri dan kanan */
+            align-items: center; /* Vertikal center */
+            padding: 20px; /* Padding untuk header */
+            background-color: #343a40; /* Warna header */
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .header-title {
+            font-size: 24px; /* Ukuran font untuk judul */
+            margin-left: 20px; /* Ruang antara judul dan logo */
+        }
         .navbar {
             background-color: #343a40; /* Warna navbar gelap */
             border: none;
             border-radius: 0;
-            display: flex; /* Menggunakan flexbox */
-            justify-content: space-between; /* Menempatkan item di kiri dan kanan */
-            align-items: center; /* Vertikal center */
-            padding: 10px 20px; /* Padding untuk navbar */
         }
         .navbar-brand {
             color: #ffffff !important; /* Warna teks navbar */
-            font-size: 24px; /* Ukuran font */
         }
         .navbar-nav>li>a {
             color: #ffffff !important; /* Warna teks menu */
@@ -37,22 +45,9 @@
             background-color: #007bff; /* Warna saat di-klik */
             color: #ffffff !important; /* Pastikan teks tetap putih */
         }
-        .header-container {
-            display: flex; /* Menggunakan flexbox */
-            justify-content: center; /* Menempatkan logo di tengah */
-            align-items: center; /* Vertikal center */
-            padding: 20px; /* Padding untuk header */
-            background-color: #343a40; /* Sama dengan warna navbar */
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
         .header-container img {
             max-width: 100px; /* Atur lebar maksimum gambar */
             height: auto; /* Menjaga proporsi gambar */
-            margin-right: 20px; /* Ruang antara logo dan teks */
-        }
-        .header-title {
-            font-size: 24px; /* Ukuran font untuk judul */
         }
         .content {
             padding: 20px;
@@ -62,24 +57,25 @@
     </style>
 </head>
 <div class="header-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
-    <span class="header-title">Perpustakaan UINSU</span>
+    <div style="display: flex; align-items: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
+        <span class="header-title">Perpustakaan UINSU</span>
+    </div>
+    <nav class="navbar navbar-default"> <!-- Navbar di kanan -->
+        <ul class="nav navbar-nav"> 
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#formulir">Formulir</a></li>
+                    <li><a href="#buku">Tabel Buku</a></li>
+                    <li><a href="#detail">Detail Pemesanan</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </div>
-
-<nav class="navbar">
-    <ul class="nav navbar-nav"> <!-- Menu di sebelah kiri -->
-        <li class="active"><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#formulir">Formulir</a></li>
-                <li><a href="#buku">Tabel Buku</a></li>
-                <li><a href="#detail">Detail Pemesanan</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>  
 
 <div class="content">
     <h2>Selamat Datang di Perpustakaan Andrino Grevo Eglon</h2>
