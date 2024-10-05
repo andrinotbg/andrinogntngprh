@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perpustakaan Andrino Grevo Eglon</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-         body {
+    body {
             background-image: url("https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg?uid=R166787732&ga=GA1.2.GA1.1.1628544991.1728095381&semt=ais_hybrid");
             background-size: cover;
             color: white;
@@ -41,7 +36,9 @@
             color: #ffffff !important; /* Pastikan teks tetap putih */
         }
         .header-container {
-            text-align: left; /* Ubah ke left untuk gambar di sebelah kiri */
+            display: flex; /* Menggunakan flexbox */
+            justify-content: center; /* Menempatkan logo di tengah */
+            align-items: center; /* Vertikal center */
             padding: 20px; /* Padding untuk header */
             background-color: #343a40; /* Sama dengan warna navbar */
             color: white;
@@ -50,7 +47,10 @@
         .header-container img {
             max-width: 100px; /* Atur lebar maksimum gambar */
             height: auto; /* Menjaga proporsi gambar */
-            align-items: center;
+            margin-right: 20px; /* Ruang antara logo dan teks */
+        }
+        .header-title {
+            font-size: 24px; /* Ukuran font untuk judul */
         }
         .content {
             padding: 20px;
@@ -61,9 +61,7 @@
 </head>
 <div class="header-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
-    <div style="float: right;">
-        <span style="font-size: 24px;">Perpustakaan UINSU</span>
-    </div>
+    <span class="header-title">Perpustakaan UINSU</span>
 </div>
 
 <nav class="navbar">
