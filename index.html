@@ -22,14 +22,21 @@
             background-color: #696969;
             font-family: 'Roboto', sans-serif;
         }
-           .navbar {
+          .navbar {
             background-color: #343a40; /* Warna navbar gelap */
             border: none;
             border-radius: 0;
-            float: right; /* Mengatur navbar ke sebelah kanan */
+            display: flex; /* Menggunakan flexbox */
+            justify-content: space-between; /* Menempatkan item di kiri dan kanan */
+            align-items: center; /* Vertikal center */
+            padding: 10px 20px; /* Padding untuk navbar */
         }
-        .navbar-brand, .navbar-nav>li>a {
+        .navbar-brand {
             color: #ffffff !important; /* Warna teks navbar */
+            font-size: 24px; /* Ukuran font */
+        }
+        .navbar-nav>li>a {
+            color: #ffffff !important; /* Warna teks menu */
         }
         .navbar-nav>li>a:hover {
             background-color: #495057; /* Warna hover */
@@ -62,32 +69,29 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
 </div>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Perpustakaan UINSU</a>
-        </div>
-         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#formulir">Formulir</a></li>
-                    <li><a href="#buku">Tabel Buku</a></li>
-                    <li><a href="#detail">Detail Pemesanan</a></li>
-                </ul>
-            </li>
-        </ul>
+<nav class="navbar">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Perpustakaan UINSU</a>
     </div>
-</nav>
+    <ul class="nav navbar-nav navbar-right"> <!-- Menu di sebelah kanan -->
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#formulir">Formulir</a></li>
+                <li><a href="#buku">Tabel Buku</a></li>
+                <li><a href="#detail">Detail Pemesanan</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>  
+
+<div class="content">
+    <h2>Selamat Datang di Perpustakaan Andrino Grevo Eglon</h2>
+    <p>Di sini Anda dapat menemukan berbagai koleksi buku dan informasi terkait lainnya. Silakan menjelajahi menu untuk mengetahui lebih lanjut.</p>
+</div>
     
-<div class="container">
-    <h2>Selamat Datang di Web Perpustakaan Andrino Grevo Eglon</h2>
-    <p>Perkenalkan, nama saya Andrino Grevo Eglon dengan 222201003. Ini adalah perpustakaan
-        <i>homepage</i> <b>pertama</b> saya, karena saya baru belajar tentang cara membuat 
-        <b><i><a href="https://library.uinsu.ac.id/perpustakaan-digital-uin-sumut/">website perpustakaan UINSU</a></i></b>.
-    </p>
     <h3>Berikut ini adalah gambar dari gedung Perpustakaan UINSU.</h3>
     <center>
         <img src="picture/Perpustakaan-uinsu-The-gate-of-knowledge.jpg" alt="Perpustakaan UINSU" class="img-responsive" />
