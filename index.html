@@ -22,10 +22,11 @@
             background-color: #696969;
             font-family: 'Roboto', sans-serif;
         }
-        .navbar {
+           .navbar {
             background-color: #343a40; /* Warna navbar gelap */
             border: none;
             border-radius: 0;
+            float: right; /* Mengatur navbar ke sebelah kanan */
         }
         .navbar-brand, .navbar-nav>li>a {
             color: #ffffff !important; /* Warna teks navbar */
@@ -33,12 +34,17 @@
         .navbar-nav>li>a:hover {
             background-color: #495057; /* Warna hover */
         }
+        .navbar-nav>li>a:focus, .navbar-nav>li>a:active {
+            background-color: #007bff; /* Warna saat di-klik */
+            color: #ffffff !important; /* Pastikan teks tetap putih */
+        }
         .header-container {
             text-align: center;
             padding: 40px 20px; /* Mengurangi padding atas dan bawah */
             background-color: #343a40; /* Sama dengan warna navbar */
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
         }
         .header-container img {
             max-width: 200px; /* Atur lebar maksimum gambar */
@@ -61,7 +67,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Perpustakaan UINSU</a>
         </div>
-        <ul class="nav navbar-nav">
+         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li class="dropdown">
