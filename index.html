@@ -6,7 +6,7 @@
     <title>Perpustakaan Andrino Grevo Eglon</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
+         body {
             background-image: url("https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg?uid=R166787732&ga=GA1.2.GA1.1.1628544991.1728095381&semt=ais_hybrid");
             background-size: cover;
             color: white;
@@ -17,12 +17,7 @@
         h1, h2, h3, h4, h5, h6 {
             color: green;
         }
-
-        body {
-            background-color: #696969;
-            font-family: 'Roboto', sans-serif;
-        }
-          .navbar {
+        .navbar {
             background-color: #343a40; /* Warna navbar gelap */
             border: none;
             border-radius: 0;
@@ -46,15 +41,14 @@
             color: #ffffff !important; /* Pastikan teks tetap putih */
         }
         .header-container {
-            text-align: center;
-            padding: 40px 20px; /* Mengurangi padding atas dan bawah */
+            text-align: left; /* Ubah ke left untuk gambar di sebelah kiri */
+            padding: 20px; /* Padding untuk header */
             background-color: #343a40; /* Sama dengan warna navbar */
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        }
         .header-container img {
-            max-width: 200px; /* Atur lebar maksimum gambar */
+            max-width: 100px; /* Atur lebar maksimum gambar */
             height: auto; /* Menjaga proporsi gambar */
         }
         .content {
@@ -64,16 +58,15 @@
         }
     </style>
 </head>
-<body>
 <div class="header-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
+    <div style="float: right;">
+        <span style="font-size: 24px;">Perpustakaan UINSU</span>
+    </div>
 </div>
 
 <nav class="navbar">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">Perpustakaan UINSU</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right"> <!-- Menu di sebelah kanan -->
+    <ul class="nav navbar-nav"> <!-- Menu di sebelah kiri -->
         <li class="active"><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li class="dropdown">
