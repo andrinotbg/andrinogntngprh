@@ -204,6 +204,30 @@
             <td>-</td>
         </tr>
     </table>
+    <h3>Pameran Buku</h3>
+    <ul id="book-list">
+        <li>
+            <span>The American Spiritual Culture</span>
+            <button class="details-btn">Detail</button>
+        </li>
+        <li>
+            <span>Negara Demokrasi Indonesia</span>
+            <button class="details-btn">Detail</button>
+        </li>
+        <li>
+            <span>The rainbow and women in love</span>
+            <button class="details-btn">Detail</button>
+        </li>
+        <li>
+            <span>Mari Bung, Rebut Kembali</span>
+            <button class="details-btn">Detail</button>
+        </li>
+        <li>
+            <span>125 tip manajemen waktu</span>
+            <button class="details-btn">Detail</button>
+        </li>
+    </ul>
+    <div id="book-detail" style="margin-top: 20px;"></div>
 </div>
 
 <div class="content" id="detail">
@@ -248,6 +272,32 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+
+<script>    
+    const bookDetails = {
+        "The American Spiritual Culture": "Written by William Dean, published in 2002. A deep dive into the spiritual essence of American culture.",
+        "Negara Demokrasi Indonesia": "Written by Dadang Juliantara, published in 2002. An analysis of Indonesia's democratic evolution.",
+        "The rainbow and women in love": "Written by D.H. Lawrence, published in 1969. A literary exploration of love and desire.",
+        "Mari Bung, Rebut Kembali": "Written by Saleh, R.H.A., published in 2000. A motivational book on reclaiming one's passion.",
+        "125 tip manajemen waktu": "Written by Al-Qa'qa, Abu, published in 2004. Tips and strategies for effective time management."
+    };
+
+    const detailButtons = document.querySelectorAll('.details-btn');
+
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const bookTitle = this.previousElementSibling.textContent; // Mengambil nama buku dari span sebelumnya
+            const detailDiv = document.getElementById('book-detail');
+
+            if (bookDetails[bookTitle]) {
+                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[bookTitle]}</p>`;
+            } else {
+                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
+            }
+        });
+    });
+</script>
+    
 </body>
 </html>
