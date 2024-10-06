@@ -38,10 +38,10 @@
             background-color: #ffffff; 
             padding: 20px;
             border-radius: 5px;
-            margin: 20px auto; /* Mengatur margin otomatis untuk sentralisasi */
+            margin: 20px auto; 
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             color: #000; 
-            max-width: 800px; /* Menetapkan lebar maksimum */
+            max-width: 800px; 
         }
         .header-container img {
             max-width: 100px; 
@@ -49,6 +49,24 @@
         }
         h2, h3, h5, h6 {
             color: #343a40; 
+        }
+        .book-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .details-btn {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .details-btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -206,23 +224,23 @@
     </table>
     <h3>Pameran Buku</h3>
     <ul id="book-list">
-        <li>
+        <li class="book-item">
             <span>The American Spiritual Culture</span>
             <button class="details-btn">Detail</button>
         </li>
-        <li>
+        <li class="book-item">
             <span>Negara Demokrasi Indonesia</span>
             <button class="details-btn">Detail</button>
         </li>
-        <li>
+        <li class="book-item">
             <span>The rainbow and women in love</span>
             <button class="details-btn">Detail</button>
         </li>
-        <li>
+        <li class="book-item">
             <span>Mari Bung, Rebut Kembali</span>
             <button class="details-btn">Detail</button>
         </li>
-        <li>
+        <li class="book-item">
             <span>125 tip manajemen waktu</span>
             <button class="details-btn">Detail</button>
         </li>
@@ -287,7 +305,7 @@
 
     detailButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const bookTitle = this.previousElementSibling.textContent; // Mengambil nama buku dari span sebelumnya
+            const bookTitle = this.previousElementSibling.textContent; 
             const detailDiv = document.getElementById('book-detail');
 
             if (bookDetails[bookTitle]) {
