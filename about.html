@@ -12,11 +12,27 @@
             color: white;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-        } 
-         .navbar {
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff; 
+            color: #343a40;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .navbar {
             background-color: #ffffff; 
             border: none;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .navbar-brand, .navbar-nav>li>a {
+            color: #343a40 !important; 
+        }
+        .navbar-nav>li>a:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
         }
         .content {
             background-color: #ffffff; 
@@ -34,13 +50,13 @@
         h2, h3, h5, h6 {
             color: #343a40; 
         }
-        
     </style>
 </head>
 <body>
 
 <div class="header-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
+    <nav class="navbar navbar-default"></nav>
 </div>
 
  <div>
