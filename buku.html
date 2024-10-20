@@ -50,30 +50,6 @@
         h2, h3, h5, h6 {
             color: #343a40; 
         } 
-        .book-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px 0;
-        }
-        .details-btn {
-            background-color: #007bff;
-            border: none;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .details-btn:hover {
-            background-color: #0056b3;
-        } 
-        .book-item img {
-    width: 80px; 
-    height: 100px; 
-    object-fit: cover;
-    margin-right: 10px; 
-}
     </style>
 </head>
 <body>
@@ -137,63 +113,8 @@
         </tr>
     </table>
    <h3>Pameran Buku</h3>
-<ul id="book-list">
-    <li class="book-item">
-        <img src="picture/71qJjBmMviS._AC_UF1000,1000_QL80_.jpg" alt="The American Spiritual Culture">
-        <span>The American Spiritual Culture</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/negara demokrasi untuk dunia.jpeg" alt="Negara Demokrasi Indonesia">
-        <span>Negara Demokrasi Indonesia</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/71rOwimx45L._AC_UF1000,1000_QL80_.jpg" alt="The rainbow and women in love">
-        <span>The rainbow and women in love</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/c7863ebb-d7d9-447b-8198-028b70c7fba7.jpg" alt="Mari Bung, Rebut Kembali">
-        <span>Mari Bung, Rebut Kembali</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/0efb41fe14f5d20cdf081ab7316fd323.jpeg" alt="125 tip manajemen waktu">
-        <span>125 tip manajemen waktu</span>
-        <button class="details-btn">Detail</button>
-    </li>
-</ul>
-    <div id="book-detail" style="margin-top: 20px;"></div>
-</div>  
 
 <script src="js/bootstrap.min.js"></script> 
-
-<script>    
-    const bookDetails = {
-        "The American Spiritual Culture": "Written by William Dean, published in 2002. A deep dive into the spiritual essence of American culture.",
-        "Negara Demokrasi Indonesia": "Written by Dadang Juliantara, published in 2002. An analysis of Indonesia's democratic evolution.",
-        "The rainbow and women in love": "Written by D.H. Lawrence, published in 1969. A literary exploration of love and desire.",
-        "Mari Bung, Rebut Kembali": "Written by Saleh, R.H.A., published in 2000. A motivational book on reclaiming one's passion.",
-        "125 tip manajemen waktu": "Written by Al-Qa'qa, Abu, published in 2004. Tips and strategies for effective time management."
-    };
-
-    const detailButtons = document.querySelectorAll('.details-btn');
-
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const bookTitle = this.previousElementSibling.textContent; 
-            const detailDiv = document.getElementById('book-detail');
-
-            if (bookDetails[bookTitle]) {
-                detailDiv.innerHTML = `<h4>Detail Buku:</h4><p>${bookDetails[bookTitle]}</p>`;
-            } else {
-                detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
-            }
-        });
-    });
-</script> 
-
 </div>
 </body>
     
