@@ -53,6 +53,7 @@
     </style>
 </head>
 <body>
+    <div id="navbar-placeholder"></div>
 
     <div class="header-container">
         <h1>Perpustakaan UINSU</h1>
@@ -102,6 +103,15 @@
         <button type="submit" class="btn btn-primary">Kirim</button>
     </form>
 </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
+</script>
 
 </body>
 </html>>
