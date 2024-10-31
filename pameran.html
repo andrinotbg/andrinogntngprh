@@ -83,6 +83,7 @@
     </style>
 </head>
 <body>
+    <div id="navbar-placeholder"></div>
 
     <div class="header-container">
         <h1>Perpustakaan UINSU</h1>
@@ -121,9 +122,13 @@
     <div id="book-detail" style="margin-top: 20px;"></div>
 </div>  
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script> 
 
 <script>    
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
     const bookDetails = {
         "The American Spiritual Culture": "Written by William Dean, published in 2002. A deep dive into the spiritual essence of American culture.",
         "Negara Demokrasi Indonesia": "Written by Dadang Juliantara, published in 2002. An analysis of Indonesia's democratic evolution.",
