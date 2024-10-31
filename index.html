@@ -54,31 +54,7 @@
     </style>
 </head>
 <body>
-    
-<div class="header-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Logo-UIN-SU-Medan-PNG-1.png/1065px-Logo-UIN-SU-Medan-PNG-1.png" alt="Perpustakaan UINSU Logo">
-    <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav"> 
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="formulir.html">Formulir</a></li>
-                    <li><a href="buku.html">Tabel Buku</a></li>
-                    <li><a href="pameran.html">Pameran Buku</a></li>
-                    <li><a href="detail.html">Detail Pemesanan</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="modul-3.html">HTML DAN CSS</a></li>
-                    <li><a href="modul-5.html">Javascript</a></li>
-                </ul>
-        </ul>
-    </nav>
-</div>
+    <div id="navbar-placeholder"></div>
 
 <div class="content" id="home">
     <h2>Selamat Datang di Perpustakaan Andrino Grevo Eglon</h2>
@@ -98,6 +74,12 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<script>
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
+</script>
 
     
 </body>
