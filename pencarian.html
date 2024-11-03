@@ -6,7 +6,7 @@
     <title>Koleksi Buku</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-       body {
+        body {
             background-image: url("https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg");
             background-size: cover;
             color: black;
@@ -28,23 +28,40 @@
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
-
+        .navbar {
+            background-color: #ffffff; 
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .navbar-brand, .navbar-nav>li>a {
+            color: #343a40 !important; 
+        }
+        .navbar-nav>li>a:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+        #search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
         #search {
-            margin-bottom: 20px;
             padding: 10px;
             width: 100%;
             max-width: 400px;
-            border: 1px solid #ccc;
+            border: 1px solid #4CAF50;
             border-radius: 5px;
+            font-size: 16px;
         }
-
+        #search:focus {
+            border-color: #2E7D32;
+            outline: none;
+        }
         #book-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
-
         .book-item {
             background: white;
             border: 1px solid #ddd;
@@ -53,22 +70,23 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-
         .book-item:hover {
             transform: scale(1.05);
         }
-
         .book-item img {
             width: 100%; 
             height: 200px; 
             object-fit: cover; 
         }
-
         .book-item p {
             padding: 10px;
             text-align: center;
             font-weight: bold;
             color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
         }
     </style>
 </head>
@@ -76,27 +94,30 @@
     <div id="navbar-placeholder"></div>
     
     <h1>Koleksi Buku</h1>
-    <input type="text" id="search" placeholder="Cari buku...">
+    <div id="search-container">
+        <input type="text" id="search" placeholder="Cari buku...">
+    </div>
+    
     <div id="book-list">
         <div class="book-item">
             <img src="picture/71qJjBmMviS._AC_UF1000,1000_QL80_.jpg" alt="The American Spiritual Culture">
             <p>The American Spiritual Culture</p>
         </div>
         <div class="book-item">
-            <img src="picture/71rOwimx45L._AC_UF1000,1000_QL80_.jpg" alt="The rainbow and women in love">
-            <p>The rainbow and women in love</p>
+            <img src="picture/71rOwimx45L._AC_UF1000,1000_QL80_.jpg" alt="The Rainbow and Women in Love">
+            <p>The Rainbow and Women in Love</p>
         </div>
         <div class="book-item">
-            <img src="picture/0efb41fe14f5d20cdf081ab7316fd323.jpeg" alt="125 tip manajemen waktu">
-            <p>125 tip manajemen waktu</p>
+            <img src="picture/0efb41fe14f5d20cdf081ab7316fd323.jpeg" alt="125 Tip Manajemen Waktu">
+            <p>125 Tip Manajemen Waktu</p>
         </div>
         <div class="book-item">
             <img src="picture/c7863ebb-d7d9-447b-8198-028b70c7fba7.jpg" alt="Mari Bung, Rebut Kembali">
             <p>Mari Bung, Rebut Kembali</p>
         </div>
         <div class="book-item">
-            <img src="picture/negara demokrasi untuk dunia.jpeg" alt="The rainbow and women in love">
-            <p>The rainbow and women in love</p>
+            <img src="picture/negara demokrasi untuk dunia.jpeg" alt="Negara Demokrasi untuk Dunia">
+            <p>Negara Demokrasi untuk Dunia</p>
         </div>
     </div>
 
@@ -105,7 +126,7 @@
     
     <script>
         $(function(){
-        $("#navbar-placeholder").load("navbar.html");
+            $("#navbar-placeholder").load("navbar.html");
         });
         document.getElementById('search').addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
