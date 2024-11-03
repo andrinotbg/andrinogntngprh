@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Buku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #search {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        #book-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .book-item {
+            text-align: center;
+            width: 150px; /* Atur lebar tetap untuk semua buku */
+        }
+
+        .book-item img {
+            width: 100%; /* Gambar mengikuti lebar item */
+            height: 200px; /* Tinggi tetap untuk semua gambar */
+            object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+        }
+    </style>
+</head>
+<body>
+    <h1>Koleksi Buku</h1>
+    <input type="text" id="search" placeholder="Cari buku...">
+    <div id="book-list">
+        <div class="book-item">
+            <img src="https://example.com/harry-potter.jpg" alt="Harry Potter dan Batu Bertuah">
+            <p>Harry Potter dan Batu Bertuah</p>
+        </div>
+        <div class="book-item">
+            <img src="https://example.com/lotr.jpg" alt="Lord of the Rings: Fellowship of the Ring">
+            <p>Lord of the Rings: Fellowship of the Ring</p>
+        </div>
+        <div class="book-item">
+            <img src="https://example.com/das-kapital.jpg" alt="Das Kapital">
+            <p>Das Kapital</p>
+        </div>
+        <div class="book-item">
+            <img src="https://example.com/pride-and-prejudice.jpg" alt="Pride and Prejudice">
+            <p>Pride and Prejudice</p>
+        </div>
+        <div class="book-item">
+            <img src="https://example.com/to-kill-a-mockingbird.jpg" alt="To Kill a Mockingbird">
+            <p>To Kill a Mockingbird</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('search').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const books = document.querySelectorAll('.book-item');
+
+            books.forEach(book => {
+                const title = book.querySelector('p').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    book.style.display = '';
+                } else {
+                    book.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
