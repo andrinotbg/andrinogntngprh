@@ -1,152 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perpustakaan Andrino Grevo Eglon</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Perpustakaan UNIMED</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url("https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg");
+            background-image: url("picture/09528de6b7772c6ae081a2ee382e7eab.jpg");
             background-size: cover;
-            color: black;
+            color: white;
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #ffffff; 
-            color: black;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+        h1 {
+            color: #FFD700;
+            text-align: center;
+            text-decoration: underline;
         }
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
+
+        h2 {
+            color: #FFD700;
+            text-align: center;
+        }
+
+        section {
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
+            margin: 20px 0;
             border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-        .navbar {
-            background-color: #ffffff; 
-            border: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-        .navbar-brand, .navbar-nav>li>a {
-            color: #343a40 !important; 
-        }
-        .navbar-nav>li>a:hover {
-            background-color: #f8f9fa;
-            color: #007bff;
-        }
-        .content {
-            background-color: #ffffff; 
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px auto; 
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            color: #000; 
-            max-width: 800px; 
-        }
-        .header-container img {
-            max-width: 100px; 
-            height: auto; 
-        }
-        h2, h3, h5, h6 {
-            color: black; 
-        } 
-        .book-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px 0;
-        }
-        .details-btn {
-            background-color: #007bff;
-            border: none;
             color: white;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
         }
-        .details-btn:hover {
-            background-color: #0056b3;
-        } 
-        .book-item img {
-    width: 80px; 
-    height: 100px; 
-    object-fit: cover;
-    margin-right: 10px; 
-}
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .book {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            flex: 1 1 30%; /* Flexbox untuk menjaga ukuran buku tetap konsisten */
+            max-width: 300px; /* Maksimal lebar buku */
+            height: 400px; /* Tinggi konsisten */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+        }
+
+        /* Efek ketika hover buku */
+        .book .book-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Transparansi */
+            color: white;
+            padding: 20px;
+            opacity: 0; /* Mulai dengan opacity 0 */
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .book:hover .book-info {
+            opacity: 1; /* Opacity 1 saat hover */
+        }
+
+        .book-info h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #FFD700;
+        }
+
+        .book-info p {
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
 
-    <div class="container">
-   <h3>Pameran Buku</h3>
-<ul id="book-list">
-    <li class="book-item">
-        <img src="picture/71qJjBmMviS._AC_UF1000,1000_QL80_.jpg" alt="The American Spiritual Culture">
-        <span>The American Spiritual Culture</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/negara demokrasi untuk dunia.jpeg" alt="Negara Demokrasi Indonesia">
-        <span>Negara Demokrasi Indonesia</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/71rOwimx45L._AC_UF1000,1000_QL80_.jpg" alt="The rainbow and women in love">
-        <span>The rainbow and women in love</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/c7863ebb-d7d9-447b-8198-028b70c7fba7.jpg" alt="Mari Bung, Rebut Kembali">
-        <span>Mari Bung, Rebut Kembali</span>
-        <button class="details-btn">Detail</button>
-    </li>
-    <li class="book-item">
-        <img src="picture/0efb41fe14f5d20cdf081ab7316fd323.jpeg" alt="125 tip manajemen waktu">
-        <span>125 tip manajemen waktu</span>
-        <button class="details-btn">Detail</button>
-    </li>
-</ul>
-    <div id="book-detail" style="margin-top: 20px;"></div>
-</div>  
+<section id="gallery" class="container">
+    <h2 class="text-center">Galeri Buku</h2>
+    <div class="row" id="book-gallery"></div>
+</section>
+
+<div class="footer">
+    <p>&copy; 2024 Perpustakaan UNIMED. Semua hak dilindungi.</p>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script>    
-    $(function(){
-        $("#navbar-placeholder").load("navbar.html");
-    });
-    const bookDetails = {
-        "The American Spiritual Culture": "Written by William Dean, published in 2002. A deep dive into the spiritual essence of American culture.",
-        "Negara Demokrasi Indonesia": "Written by Dadang Juliantara, published in 2002. An analysis of Indonesia's democratic evolution.",
-        "The rainbow and women in love": "Written by D.H. Lawrence, published in 1969. A literary exploration of love and desire.",
-        "Mari Bung, Rebut Kembali": "Written by Saleh, R.H.A., published in 2000. A motivational book on reclaiming one's passion.",
-        "125 tip manajemen waktu": "Written by Al-Qa'qa, Abu, published in 2004. Tips and strategies for effective time management."
-    };
+<script>
+  const books = [
+    {
+        title: "The American Spiritual Culture",
+        image: "picture/71qJjBmMviS._AC_UF1000,1000_QL80_.jpg",
+        description: "Pengarang: : William Dean"
+    },
+    {
+        title: "Negara Demokrasi Indonesia",
+        image: "picture/negara demokrasi untuk dunia.jpeg",
+        description: "Pengarang: Dadang Juliantara"
+    },
+    {
+        title: "The rainbow and women in love",
+        image: "picture/71rOwimx45L._AC_UF1000,1000_QL80_.jpg",
+        description: "Pengarang: D.H. Lawrence"
+    },
+    {
+        title: "Mari Bung, Rebut Kembali",
+        image: "picture/c7863ebb-d7d9-447b-8198-028b70c7fba7.jpg",
+        description: "Pengarang:  Saleh, R.H.A."
+    },
+    {
+        title: "125 tip manajemen waktu",
+        image: "picture/0efb41fe14f5d20cdf081ab7316fd323.jpeg",
+        description: "Pengarang: Al-Qa'qa, Abu"
+    }
+];
 
-    const detailButtons = document.querySelectorAll('.details-btn');
+const gallery = document.getElementById("book-gallery");
 
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const bookTitle = this.previousElementSibling.textContent; 
-            const detailDiv = document.getElementById('book-detail');
+books.forEach(book => {
+    const colDiv = document.createElement("div");
+    colDiv.classList.add("col-xs-12", "col-sm-6", "col-md-4");
 
-            if (bookDetails[bookTitle]) {
-                detailDiv.innerHTML = <h4>Detail Buku:</h4><p>${bookDetails[bookTitle]}</p>;
-            } else {
-                detailDiv.innerHTML = <p>Detail untuk buku ini tidak tersedia.</p>;
-            }
-        });
-    });
-</script> 
+    const bookDiv = document.createElement("div");
+    bookDiv.classList.add("book");
 
-</div>
-</body> 
+    bookDiv.innerHTML = `
+        <img src="${book.image}" alt="${book.title}">
+        <div class="book-info">
+            <h3>${book.title}</h3>
+            <p>${book.description}</p>
+        </div>
+    `;
+
+    colDiv.appendChild(bookDiv);
+    gallery.appendChild(colDiv);
+});
+</script>
+
+</body>
+</html>
+
