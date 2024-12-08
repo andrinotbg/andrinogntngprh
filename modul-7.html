@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar PHP</title>
+</head>
+<body>
+    <h1>Daftar Hari Belajar PHP</h1>
+    <div id="list"></div>
+
+    <script>
+        // Mengambil elemen dengan id 'list'
+        const listElement = document.getElementById('list');
+
+        // Menggunakan loop untuk membuat daftar hari belajar PHP
+        for (let i = 1; i <= 1000; i++) {
+            // Membuat elemen <p> untuk setiap hari
+            const paragraph = document.createElement('p');
+            paragraph.textContent = `Ini adalah hari ke-${i} belajar PHP`;
+            
+            // Menambahkan elemen <p> ke dalam div dengan id 'list'
+            listElement.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>
