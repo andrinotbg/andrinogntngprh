@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+</head>
+<body>
+    <h1>Hasil Perhitungan</h1>
+    <p id="result"></p>
+
+    <script>
+        // Mengambil URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const number1 = parseFloat(urlParams.get('number1'));
+        const number2 = parseFloat(urlParams.get('number2'));
+        const operator = urlParams.get('operator');
+
+        let result;
+
+        // Melakukan perhitungan berdasarkan operator
+        switch (operator) {
+            case 'add':
+                result = number1 + number2;
+                break;
+            case 'subtract':
+                result = number1 - number2;
+                break;
+            case 'multiply':
+                result = number1 * number2;
+                break;
+            case 'divide':
+                if (number2 !== 0) {
+                    result = number1 / number2;
+                } else {
+                    result = 'Pembagian dengan nol tidak diizinkan';
+                }
+                break;
+            default:
+                result = 'Operasi tidak valid';
+        }
+
+        // Menampilkan hasil perhitungan
+        document.getElementById('result').textContent = `Hasil: ${result}`;
+    </script>
+</body>
+</html>
