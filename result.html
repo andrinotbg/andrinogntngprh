@@ -59,25 +59,6 @@
         <p id="result"></p>
         <a href="modul-7.html" class="btn-back">Kembali</a>
     </div>
-     <h2>Login</h2>
-
-        <!-- Form Login -->
-        <form id="loginForm" onsubmit="return handleLogin(event)">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-custom btn-block">Login</button>
-        </form>
-
-        <!-- Alert Container -->
-        <div id="alertContainer" style="margin-top: 20px;"></div>
-    </div>
-
     <script>
         // Mengambil URL query string
         const urlParams = new URLSearchParams(window.location.search);
@@ -111,33 +92,6 @@
 
         // Menampilkan hasil perhitungan
         document.getElementById('result').textContent = `Hasil: ${result}`;
-
-        // Fungsi untuk menangani login
-        function handleLogin(event) {
-            event.preventDefault(); // Menghindari reload halaman saat form disubmit
-
-            // Mendapatkan nilai dari input
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-
-            // Container untuk menampilkan pesan hasil login
-            const alertContainer = document.getElementById("alertContainer");
-
-            // Clear previous alert
-            alertContainer.innerHTML = '';
-
-            // Cek kondisi
-            if (!username || !password) {
-                // Kondisi jika input kosong
-                alertContainer.innerHTML = '<div class="alert alert-warning">Input tidak lengkap! Pastikan username dan password diisi.</div>';
-            } else if (username === 'admin' && password === '1234') {
-                // Kondisi login sukses
-                alertContainer.innerHTML = '<div class="alert alert-success">Login sukses! Selamat datang, ' + username + '.</div>';
-            } else {
-                // Kondisi jika ID atau password salah
-                alertContainer.innerHTML = '<div class="alert alert-danger">Login gagal! Username atau password salah.</div>';
-            }
-        }
     </script>
 </body>
 </html>
