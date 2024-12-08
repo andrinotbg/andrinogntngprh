@@ -59,7 +59,13 @@
     <h1>Daftar Hari Belajar PHP</h1>
     <div id="list"></div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <script>
+    $(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
         // Mengambil elemen dengan id 'list'
         const listElement = document.getElementById('list');
 
